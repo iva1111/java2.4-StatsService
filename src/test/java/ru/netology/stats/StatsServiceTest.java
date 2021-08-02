@@ -19,11 +19,11 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void AverageMonthlySales() {   // Средняя сумма продаж в месяц, задача 2
+    public void averageMonthlySales() {   // Средняя сумма продаж в месяц, задача 2
         StatsService service = new StatsService();
 
         long expected = 15;
-        long actual = service.AverageMonthlySales(monthSales);
+        long actual = service.averageMonthlySales(monthSales);
 
         assertEquals(expected, actual);
     }

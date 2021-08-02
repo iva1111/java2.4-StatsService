@@ -11,9 +11,8 @@ public class StatsService {
     }
 
 
-    public long AverageMonthlySales(long[] sales) {    // Средняя сумма продаж в месяц, задача 2
-        long average = sumSale(sales) / sales.length;
-        return average;
+    public long averageMonthlySales(long[] sales) {    // Средняя сумма продаж в месяц, задача 2
+        return sumSale(sales) / sales.length;
     }
 
 
@@ -44,7 +43,7 @@ public class StatsService {
 
     public long numberMonthsLowSales(long[] sales) { // Количество месяцев продажи ниже среднего, задача 5
         long months = 0;
-        long average = AverageMonthlySales(sales);
+        long average = averageMonthlySales(sales);
         for (long sale : sales) {
             if (sale < average) {
                 months += 1;
@@ -55,7 +54,7 @@ public class StatsService {
 
     public long numberMonthsHidhSales(long[] sales) { // Количество месяцев продажи ниже среднего, задача 5
         long months = 0;
-        long average = AverageMonthlySales(sales);
+        long average = averageMonthlySales(sales);
         for (long sale : sales) {
             if (sale > average) {
                 months += 1;
